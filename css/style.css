@@ -1,0 +1,237 @@
+:root{
+    --color-1: #0d21a1;
+    --color-2: #011638;
+    --color-3: #364967;
+    --color-4: #ee5624;
+}
+
+@font-face{
+    font-family: 'Inter-Bold';
+    src: url('fonts/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight: 900;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* HEADER */
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion__logo{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--color-2);
+}
+
+.nav__menu img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav__menu img:hover{
+    cursor: pointer;
+}
+
+.nav__enlaces{
+    display: none;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__bg{
+    background-image: url(../images/guy.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+}
+
+.bg__card{
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    padding: 1rem;
+    width: 90%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    background-color: #fffefd;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.42);
+}
+
+.card__icon img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.stars-text__stars{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stars-text__stars img{
+    height: 1.5rem;
+}
+
+.stars-text__stars p{
+    font-size: 1rem;
+}
+
+.card__right{
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.text__container{
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.text__container h1{
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+
+.text__container p{
+    font-size: 1.5rem;
+}
+
+.text__container button{
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-1);
+    margin-top: 3rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.text__container button:hover{
+    cursor: pointer;
+    background-color: var(--color-2);
+}
+
+@media screen and (min-width: 600px){
+    .navegacion{
+        margin-bottom: 5rem;
+    }
+    
+    .nav__menu{
+        display: none;
+    }
+
+    .nav__enlaces{
+        display: flex;
+        list-style: none;
+        gap: 3rem;
+    }
+    
+    .nav__enlaces li a{
+        color: var(--color-2);
+        font-size: 1.3rem;
+    }
+
+    #enlaces--btn{
+        display: inline;
+        background-color: #0d21a1;
+        padding: 1.5rem 2.3rem;
+        border-radius: 1rem;
+        color: #fff;
+    }
+
+    #enlaces--boton:hover{
+        background-color: var(--color-2);
+    }
+
+    .hero{
+        flex-direction: row;
+    }
+
+    .hero__bg{
+        order: 2;
+        width: 60%;
+        height: 60rem;
+    }
+
+    .bg__card {
+        left: 7rem;
+        bottom: 10rem;
+        width: 26rem;
+    }
+
+    .hero__text{
+        order: 1;
+        width: 40%;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text__container{
+        text-align: start;
+    }
+
+    .text__container h1, .text__container p{
+        text-align: start;
+    }
+
+    .text__container button{
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 850px){
+
+    .nav__enlaces{
+        gap: 3.5rem;
+    }
+    
+    .nav__enlaces li a{
+        font-size: 1.5rem;
+    }
+
+    .bg__card {
+        left: 20rem;
+        width: 30rem;
+    }
+}
